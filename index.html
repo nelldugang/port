@@ -4,9 +4,7 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.theme.min.css">
 		<link rel="stylesheet" type="text/css" href="bootstrap/style.css" charset="utf-8">
-		<link rel="stylesheet" href="bootstrap/animate.css">
 
 
 
@@ -60,10 +58,10 @@
 			<br><br>
 		</div>
 
-	<!-- About -->
-	<section class="aboutus" style="background-color: #fffde7;">
+	<!-- About --><div id="aboutme"></div>
+	<section class="aboutus" style="background-color: #fffde7;" >
 		<br><br>
-	    <div class="container" id="aboutme">
+	    <div class="container">
 	      <div class="row">
 	       <div class="col-md-12">
 	      	<div class="heading">
@@ -73,7 +71,7 @@
 	      </div> 
 	       </div> 
 	      <div class="row">
-	      <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"><img src="images/jhon-img.jpg" alt=""></div>
+	      
 	      	<div class=" col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left">
 	        	<h3>Willam Nell Dugang</h3>
 	            <h4>Aspiring Web Developer &amp; Web Designer</h4>
@@ -195,9 +193,9 @@
 	</div>
 
 	<!--Work Experties start -->
-	  <section class="myexperties" style="background-color: #fffde7"><br><br><br >
-	  	<div class="container">
-	        <div class="heading" id="experience">
+	  <section class="myexperties" style="background-color: #fffde7"><br><br><br>
+	  	<div class="container" id="experience">
+	        <div class="heading">
 	        <h1 class="huge" style="text-align: center;">Work Experience</h1>
 	        <h3 style="text-align: center">My previous associations</h3>        
 	      </div>
@@ -315,12 +313,12 @@
 	</div>
 	</div>
 
-				<div class="navi">
-					<a href="#home"><img class="hvr-pulse-grow" src="img/home.png" style="width:65px;display: block"></a><br>
-					<a href="#aboutme"><img class="hvr-pulse-grow" src="img/user.png" style="width:60px;display: block"></a><br>
-					<a href="#port"><img class="hvr-pulse-grow" src="img/laptop.png" style="width:60px;display: block"></a><br>
-					<a href="#experience"><img class="hvr-pulse-grow" src="img/helmet.png" style="width:60px;display: block"></a><br>
-					<a href="#contact"><img class="hvr-pulse-grow" src="img/envelope.png" style="width:60px;display: block"></a><br>
+				<div class="navi" onresize="myFunction()">
+					<a class="navicons" href="#home"><img class="hvr-pulse-grow" src="img/home.png" style="width:65px;"></a>
+					<a class="navicons" href="#aboutme"><img class="hvr-pulse-grow" src="img/user.png" style="width:60px;"></a>
+					<a class="navicons" href="#port"><img class="hvr-pulse-grow" src="img/laptop.png" style="width:60px;"></a>
+					<a class="navicons" href="#experience"><img class="hvr-pulse-grow" src="img/helmet.png" style="width:60px;"></a>
+					<a class="navicons" href="#contact"><img class="hvr-pulse-grow" src="img/envelope.png" style="width:60px;"></a>
 				</div>
 
 				
@@ -332,6 +330,26 @@
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 
 	<script>
+		$(document).ready(function() {
+
+           function checkWidth() {
+              var windowWidth = $(window).width();
+              if (windowWidth <= 500) {
+                  $(".navi").css({'top' : '10px', 'left' : '10%'});
+                  $(".navicons").css({'display':'inline-block','padding':'0'});
+                  // $(".collapse1").show();
+              }
+              else {
+                  $(".navi").css({'top' : '20%', 'left' : '10px'});
+                  $(".navicons").css({'display':'block','padding':'10px'});
+                  
+              }
+           }
+           checkWidth();
+
+           $(window).resize(checkWidth);
+          });
+
 	$('a[href*="#"]').click(function(e) {
 	    e.preventDefault();
 	    var target = this.hash;
@@ -343,6 +361,12 @@
 	        window.location.hash = target;
 	    });
 	});
+
+
+	
+
+
+
 	</script>
 
 
