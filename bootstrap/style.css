@@ -5,10 +5,22 @@ body {
 	background-color: #fff3e0;
 }
 
+#home {
+  background-image: url('../img/back2.jpg');
+  background-size:contain;
+  /*background-size: 100% 100%;
+  background-repeat: no-repeat;*/
+  height:auto;
+}
+
+.divider {
+  
+}
+
 .angled1 {
-	background-color: #fff3e0;
+	/*background-color: #fff3e0;*/
     /*clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);*/
-  	height:650px;
+  	/*height:650px;*/
   	padding:0;
 	}
 .navbar-default {
@@ -44,7 +56,7 @@ color: #666;  /*Sets the text hover color on navbar*/
 }
 
 .profcont {
-  position: relative;
+  /*position: relative;*/
 }
 
 .prof {
@@ -67,7 +79,7 @@ color: #666;  /*Sets the text hover color on navbar*/
 }
 
 .myexperties .container{
-    padding-top:67px ;
+    padding-top:20px ;
     padding-bottom:0 ;
     margin-bottom:-20px;
 }
@@ -105,7 +117,7 @@ color: #666;  /*Sets the text hover color on navbar*/
 }
 
 .navi{
-  position: fixed;
+  
 }
 /*////////////////////////////speechbubble*/
 
