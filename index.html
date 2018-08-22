@@ -29,25 +29,25 @@
 					<img class="prof" src="img/profile1.jpg">
 						<div class="talk-bubble tri-right border round btm-left-in hvr-wobble-bottom">
 						  <div class="talktext">
-						    <p>Hello there, my name is <a href="#aboutme" class="hvr-wobble-bottom">Nell.</a></p>
+						    <p>Hello there, my name is <a href="#aboutme" class="hvr-wobble-bottom" onclick="playSound()">Nell.</a></p>
 						  </div>
 						</div>
 
 						<div class="talk-bubble2 tri-right border1 round btm-right hvr-wobble-bottom">
 						  <div class="talktext">
-						    <p>Want to see my recent <a class="hvr-wobble-bottom" href="#port">Projects?</a></p>
+						    <p>Want to see my recent <a class="hvr-wobble-bottom" href="#port" onclick="playSound()">Projects?</a></p>
 						  </div>
 						</div>
 
 						<div class="talk-bubble3 tri-right border2 round top-right hvr-wobble-bottom">
 						  <div class="talktext">
-						    <p>I've been <a class="hvr-wobble-bottom" href="#experience">working</a> hard...</p>
+						    <p>I've been <a class="hvr-wobble-bottom" href="#experience" onclick="playSound()">working</a> hard...</p>
 						  </div>
 						</div>
 
 						<div class="talk-bubble4 tri-right border3 round top-left hvr-wobble-bottom">
 						  <div class="talktext">
-						    <p><a class="hvr-wobble-bottom" href="#contact">Contact</a> me.</p>
+						    <p><a class="hvr-wobble-bottom" href="#contact" onclick="playSound()">Contact</a> me.</p>
 						  </div>
 						</div>
 				</div>
@@ -258,7 +258,7 @@
 	<div class="container" id="contact" style="text-align: center;padding-top: 50px;outline: none"><div class="row" style="text-align: center;">
 				<img class="divider" src="img/divider.png"><br><br>
 		<h1 class="huge">Send me a message</h1>
-	<a class="modalbtn" href="#myModal" data-target="#myModal" data-toggle="modal"><img src="img/message.png" width="100" style="margin:100px;outline: none"></a> 
+	<a class="modalbtn" href="#myModal" data-target="#myModal" data-toggle="modal"><img src="img/message.png" width="100" style="margin:100px;outline: none" onclick="playSound()"></a> 
 	</div>
 
 
@@ -316,15 +316,16 @@
 	</div>
 			<div style="width: 100%;position: fixed;">
 				<div class="navi" onresize="myFunction()">
-					<a class="navicons" href="#home"><img class="hvr-pulse-grow" src="img/home.png"></a>
-					<a class="navicons" href="#aboutme"><img class="hvr-pulse-grow" src="img/user.png"></a>
-					<a class="navicons" href="#port"><img class="hvr-pulse-grow" src="img/laptop.png"></a>
-					<a class="navicons" href="#experience"><img class="hvr-pulse-grow" src="img/helmet.png"></a>
-					<a class="navicons" href="#contact"><img class="hvr-pulse-grow" src="img/envelope.png"></a>
+					<a class="navicons" href="#home" onclick="playSound()"><img class="hvr-pulse-grow" src="img/home.png" ></a>
+					<a class="navicons" href="#aboutme" onclick="playSound()"><img class="hvr-pulse-grow" src="img/user.png"></a>
+					<a class="navicons" href="#port" onclick="playSound()"><img class="hvr-pulse-grow" src="img/laptop.png"></a>
+					<a class="navicons" href="#experience" onclick="playSound()"><img class="hvr-pulse-grow" src="img/helmet.png"></a>
+					<a class="navicons" href="#contact" onclick="playSound()"><img class="hvr-pulse-grow" src="img/envelope.png"></a>
 				</div>
 			</div>
 				
 
+	<audio id="play" src="https://d1490khl9dq1ow.cloudfront.net/sfx/mp3preview/cough-switch_G1oCJGN_.mp3"></audio>
 
 
 
@@ -347,7 +348,7 @@
                   // $(".collapse1").show();
               }
               else {
-                  $(".navi").css({'display':'block','top' : '20%'});
+                  $(".navi").css({'display':'inline-block','top' : '20%'});
                   $(".navicons").css({'display':'block','padding':'10px'});
                   $(".divider").css('width','auto');
                   $(".hvr-pulse-grow").css('width','60px');
@@ -371,11 +372,12 @@
 	    });
 	});
 
-
 	
-
-
-
+   
+    function playSound () {
+    document.getElementById('play').play();
+}
+    
 	</script>
 
 
