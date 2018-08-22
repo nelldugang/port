@@ -314,13 +314,13 @@
 	<!--   </div> -->
 	</div>
 	</div>
-			<div style="text-align: center">
+			<div style="width: 100%;position: fixed;">
 				<div class="navi" onresize="myFunction()">
-					<a class="navicons" href="#home"><img class="hvr-pulse-grow" src="img/home.png" style="width:65px;"></a>
-					<a class="navicons" href="#aboutme"><img class="hvr-pulse-grow" src="img/user.png" style="width:60px;"></a>
-					<a class="navicons" href="#port"><img class="hvr-pulse-grow" src="img/laptop.png" style="width:60px;"></a>
-					<a class="navicons" href="#experience"><img class="hvr-pulse-grow" src="img/helmet.png" style="width:60px;"></a>
-					<a class="navicons" href="#contact"><img class="hvr-pulse-grow" src="img/envelope.png" style="width:60px;"></a>
+					<a class="navicons" href="#home"><img class="hvr-pulse-grow" src="img/home.png"></a>
+					<a class="navicons" href="#aboutme"><img class="hvr-pulse-grow" src="img/user.png"></a>
+					<a class="navicons" href="#port"><img class="hvr-pulse-grow" src="img/laptop.png"></a>
+					<a class="navicons" href="#experience"><img class="hvr-pulse-grow" src="img/helmet.png"></a>
+					<a class="navicons" href="#contact"><img class="hvr-pulse-grow" src="img/envelope.png"></a>
 				</div>
 			</div>
 				
@@ -337,15 +337,20 @@
            function checkWidth() {
               var windowWidth = $(window).width();
               if (windowWidth <= 500) {
-                  $(".navi").css({'top' : '10px','left' : '10%','position' : 'fixed'});
+                  // $(".navi").css({'top' : '10px','left':'50%', 'transform':'translate(-50%,0)'});
+
+                  $(".navi").css({'display':'flex','justify-content':'center','width':'100%','top':'20px'});
+
                   $(".navicons").css({'display':'inline-block','padding':'0'});
                   $(".divider").css('width','100%');
+                  $(".hvr-pulse-grow").css('width','40px');
                   // $(".collapse1").show();
               }
               else {
-                  $(".navi").css({'top' : '20%','position' : 'fixed','left': '10px'});
+                  $(".navi").css({'display':'block','top' : '20%'});
                   $(".navicons").css({'display':'block','padding':'10px'});
                   $(".divider").css('width','auto');
+                  $(".hvr-pulse-grow").css('width','60px');
                   
               }
            }

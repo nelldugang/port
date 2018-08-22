@@ -117,7 +117,8 @@ color: #666;  /*Sets the text hover color on navbar*/
 }
 
 .navi{
-  
+position: fixed;  
+  margin: 0;
 }
 /*////////////////////////////speechbubble*/
 
@@ -224,7 +225,7 @@ color: #666;  /*Sets the text hover color on navbar*/
   width: 0;
   height: 0;
   top: -40px;
-  left: 70%;
+  left: 50%;
   border: 20px solid #ffa726;
   border-color: transparent #ffa726 #ffa726 transparent;
 }
@@ -234,7 +235,7 @@ color: #666;  /*Sets the text hover color on navbar*/
   width: 0;
   height: 0;
   top: -20px;
-  left: 72%;
+  left: 52%;
   border: 12px solid #ffa726;
   border-color: transparent lightyellow lightyellow transparent;
 }
@@ -258,7 +259,7 @@ color: #666;  /*Sets the text hover color on navbar*/
   width: 0;
   height: 0;
   top: -40px;
-  left: 15%;
+  left: 35%;
   bottom: -40px;
   border: 20px solid #ec407a;
   border-color: transparent transparent #ec407a #ec407a;
@@ -269,7 +270,7 @@ color: #666;  /*Sets the text hover color on navbar*/
   width: 0;
   height: 0;
   top: -24px;
-  left: 17%;
+  left: 37%;
   bottom: 76px;
   border: 12px solid #ec407a;
   border-color: transparent transparent lightyellow lightyellow;
