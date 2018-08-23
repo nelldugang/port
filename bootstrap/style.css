@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Stylish|Passion+One|Fugaz+One');
 
 
-body {
+html,body {
 	background-color: #fff3e0;
+   width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 
 #home {
