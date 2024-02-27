@@ -397,11 +397,11 @@ position: fixed;
       .talk-bubble {
       display: inline-block;
       position: absolute;
-    /* width: 30%;*/
+      width: 40%;
       height: auto;
       padding:10px;
-      top:8%;
-    /* right:20%;*/
+      top:2%;
+      right:2%;
       background-color: lightyellow;
       font-size: 2.5vw;
     }
@@ -436,7 +436,7 @@ position: fixed;
       width: 40% !important;
       height: auto;
       padding:10px;
-      top:80%;
+      top:80% !important; 
       left:50% !important;
       background-color: lightyellow;
       font-size: 2.5vw;
